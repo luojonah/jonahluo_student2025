@@ -4,4 +4,5 @@ title: About
 permalink: /about/
 ---
 
-Creator of Student 2025
+im 6'5, 6'6 on a good day
+<br>yuh<br />

@@ -5,15 +5,7 @@ description: Home Page
 hide: true
 ---
 
-<h1> My Page 
-
-</h1>
-
-
-hi
-<br> im jonah
-<br> im 6'5 lowkey
-
+<h1> My Page </h1>
 
 
 <html lang="en">
@@ -30,18 +22,18 @@ hi
         }
 
         .mario-animation {
-            position: fixed; /* Fixed position to stay on bottom */
+            position: absolute; /* Fixed position to stay on bottom */
             top: 65%;
             left: -100px; /* Start position off the screen */
             width: 90px; /* Adjust size as needed */
             height: auto;
             z-index: 1000; /* Ensures it appears above other content */
-            animation: runAcross 10s linear infinite; /* Adjust duration as needed */
+            animation: runAcross 8s linear infinite; /* Adjust duration as needed */
         }
 
         @keyframes runAcross {
             0% {
-                left: -1000px; /* Start from the left edge */
+                left: -900px; /* Start from the left edge */
             }
             100% {
                 left: 100vw; /* Move to the right edge */
@@ -50,10 +42,9 @@ hi
     </style>
 </head>
 <body>
-    <!-- Your existing website content here -->
-
-    <!-- Mario animation -->
     <img src="https://media.tenor.com/UkvleU1dQK4AAAAi/2d-mario-running.gif" alt="Mario Running" class="mario-animation">
+
+    
 
 </body>
 </html>

@@ -22,7 +22,7 @@ hide: true
         }
         .mario-animation {
             position: absolute; /* Fixed position to stay on bottom */
-            top: 899px;
+            top: 950px;
             left: -100px; /* Start position off the screen */
             width: 85px; /* Adjust size as needed */
             height: auto;
@@ -45,6 +45,10 @@ hide: true
     <br>
     <br>
     <br>
+    <button onclick="window.open('https://www.youtube.com/watch?v=uvyTfRRs-kw', '_blank')">Button (Click Me!!)</button>
+    <br>
+    <br>
+    <br>
 </body>
 <body>
     <h3>Bored?</h3>
@@ -59,13 +63,14 @@ hide: true
     <br>
     <br>
     <br>
-    <button onclick="window.open('https://www.youtube.com/watch?v=SeHYcxohxCk', '_blank')">Fun Video</button>
+    <button onclick="window.open('https://www.youtube.com/watch?v=SeHYcxohxCk', '_blank')">Fun Video (Click Me!!)</button>
+    <button onclick="window.open('https://www.youtube.com/watch?v=coaN2VBNgYA&t=3s', '_blank')">Fun Video (Click Me!!)</button>
     <br>
     <br>
     <br>
     <h3>Fire Music</h3>
     <br>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5dj1vz9bgxeev4mkUrnjM1?utm_source=generator" width="75%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5dj1vz9bgxeev4mkUrnjM1?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 </body>
 </html>

@@ -43,16 +43,16 @@ permalink: /about/
 
 <ul> 
     <br>
-    <li> In my free time I enjoy spending time with God.</li>
+    <li> In my free time I enjoy spending time with God ✝</li>
     <li> My favorite sport is soccer. I've played soccer 
-    <br> since I was 5 years old. </li>
+    <br> since I was 5 years old ⚽</li>
     <li> I enjoy watching soccer games. My favorite soccer 
-    <br> team is Barcelona FC.</li> 
+    <br> team is Barcelona FC 💙</li> 
     <li> I love playing music. I've learned how to play 4 
     <br> instruments including violin, piano, bass and acoustic
-    <br> guitar.</li>
+    <br> guitar 🎻🎹🎸</li>
     <li> My favorite subject is science. My favorite branch of 
-    <br> science is Chemistry.</li>
+    <br> science is Chemistry 🧪</li>
 </ul>
 
 <style>

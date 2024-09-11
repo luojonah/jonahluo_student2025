@@ -22,7 +22,7 @@ hide: true
         }
         .mario-animation {
             position: absolute; /* Fixed position to stay on bottom */
-            top: 950px;
+            top: 1000px;
             left: -100px; /* Start position off the screen */
             width: 85px; /* Adjust size as needed */
             height: auto;

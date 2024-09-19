@@ -1,7 +1,6 @@
 ---
-layout: page
+
 title: Snake
-permalink: /snake/
 ---
 
 

@@ -6,6 +6,55 @@ hide: true
 ---
 
 <h1> My Page </h1>
+## Gaming Submenu
+<br>
+<br>
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropdown-button {
+    background-color: #3E8E41;
+  }
+</style>
+<div class="dropdown">
+  <button class="dropdown-button" style="background-color: white; color: white; padding: 16px; font-size: 16px; border-color: white; cursor: pointer; border-radius: 8px;">
+    Gaming Submenu
+  </button>
+  <div class="dropdown-content">
+    <a href="navigation/game.html" style="background-color: green; color: white;">Cookie Clicker</a>
+    <a href="navigation/calculator.html" style="background-color: orange; color: white;">Binary Calculator</a>
+    <a href="navigation/snake.html" style="background-color: red; color: white;">Snake Game</a>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
+
+
 
 <html lang="en">
 <head>
@@ -69,42 +118,17 @@ hide: true
     <br> My favorite music to listen to is Christian music whether that'd be Christian worship music when I'm by myself
     <br> doing homework or Christian rap in a more casual setting. Below are a few buttons linked to some funny memes and
     <br> videos as well as my Spotify playlists. Enjoy!!
-</body>
-<body>
+    
     <img src="https://media.tenor.com/UkvleU1dQK4AAAAi/2d-mario-running.gif" alt="Mario Running" class="mario-animation">
     <br><br><br>
     <button onclick="window.open('https://www.youtube.com/watch?v=T4NOt727wqI', '_blank')">Fun Video (Click Me!!)</button>
     <button onclick="window.open('https://www.youtube.com/watch?v=coaN2VBNgYA&t=3s', '_blank')">Fun Video (Click Me!!)</button>
     <br><br><br>
+    
     <h3>Fire Music</h3>
     <br>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5dj1vz9bgxeev4mkUrnjM1?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    <!-- Games section at the bottom -->
-<div class="games-section">
-    <h3>Games</h3>
-    <br>
-    <br>
-    <button class="redirect-btn" onclick="navigateTo('game.md')">Cookie Clicker</button>
-    <button class="redirect-btn" onclick="navigateTo('snake.md')">Snake</button>
-</div>
-
-<script>
-    function navigateTo(page) {
-        // Find the navigation bar (you might need to adjust the selector based on your layout)
-        const navBar = document.querySelector('nav');
-
-        // Create a new anchor tag that links to the .md page
-        const navLink = document.createElement('a');
-        navLink.href = '/' + page;
-        navLink.innerText = page.replace('.md', '');  // Set text without .md extension
-
-        // Add the link to the navigation bar
-        navBar.appendChild(navLink);
-
-        // Optionally: Navigate to the new page (emulates a real navigation)
-        navLink.click();
-    }
-</script>
+    
 
 </body>
 </html>

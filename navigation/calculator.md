@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: base
 title: Calculator 
-permalink: /calculator/
 ---
 
 <!-- Calculator HTML Structure -->

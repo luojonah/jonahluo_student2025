@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: base
 title: Cookie Clicker
-permalink: /game/
 ---
 
 <p>Welcome to Cookie Clicker! Go on and click that cookie!</p>

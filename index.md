@@ -73,7 +73,7 @@ hide: true
         }
         .mario-animation {
             position: absolute; /* Fixed position to stay on bottom */
-            top: 1275px;
+            top: 1615px;
             left: -100px; /* Start position off the screen */
             width: 85px; /* Adjust size as needed */
             height: auto;
@@ -131,6 +131,17 @@ hide: true
     <h3>Fire Music</h3>
     <br>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5dj1vz9bgxeev4mkUrnjM1?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <div id="comments" style="margin-top: 20px;">
+  <h3>Comments</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="luojonah/jonahluo_student2025"
+          issue-term="pathname"
+          theme="github-dark"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
     
 
 </body>

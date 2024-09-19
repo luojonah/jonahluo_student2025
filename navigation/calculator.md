@@ -3,94 +3,102 @@ layout: base
 title: Calculator 
 ---
 
-<!-- Calculator HTML Structure -->
-<div id="calculator">
-  <input type="text" id="display" disabled />
-  <div class="buttons">
-    <button onclick="clearDisplay()">C</button>
-    <button onclick="appendCharacter('(')">(</button>
-    <button onclick="appendCharacter(')')">)</button>
-    <button onclick="deleteCharacter()">Del</button>
-    <button onclick="appendCharacter('7')">7</button>
-    <button onclick="appendCharacter('8')">8</button>
-    <button onclick="appendCharacter('9')">9</button>
-    <button onclick="appendCharacter('/')">/</button>
-    <button onclick="appendCharacter('4')">4</button>
-    <button onclick="appendCharacter('5')">5</button>
-    <button onclick="appendCharacter('6')">6</button>
-    <button onclick="appendCharacter('*')">x</button>
-    <button onclick="appendCharacter('1')">1</button>
-    <button onclick="appendCharacter('2')">2</button>
-    <button onclick="appendCharacter('3')">3</button>
-    <button onclick="appendCharacter('-')">-</button>
-    <button onclick="appendCharacter('0')">0</button>
-    <button onclick="appendCharacter('.')">.</button>
-    <button onclick="calculate()">=</button>
-    <button onclick="appendCharacter('+')">+</button>
-  </div>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
 
-<!-- Calculator CSS -->
-<style>
-  #calculator {
-    width: 200px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-  }
+    <h1>Binary Calculator</h1>
 
-  #display {
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    text-align: right;
-    margin-bottom: 10px;
-  }
+    <input type="text" id="binary1" placeholder="Enter binary 1">
+    <br>
+    <input type="text" id="binary2" placeholder="Enter binary 2">
+    <br><br>
 
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
+    <button onclick="calculate('add')">Add</button>
+    <button onclick="calculate('subtract')">Subtract</button>
+    <button onclick="calculate('multiply')">Multiply</button>
+    <button onclick="calculate('divide')">Divide</button>
 
-  button {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ddd;
-    cursor: pointer;
-  }
+    <div class="result">
+        <p id="result"></p>
+    </div>
 
-  button:hover {
-    background-color: #ccc;
-  }
-</style>
+    <script>
+        function calculate(operation) {
+            let binary1 = document.getElementById('binary1').value;
+            let binary2 = document.getElementById('binary2').value;
 
-<!-- Calculator JavaScript -->
-<script>
-  function appendCharacter(character) {
-    document.getElementById('display').value += character;
-  }
+            // Check if input is valid binary
+            if (!/^[01]+$/.test(binary1) || !/^[01]+$/.test(binary2)) {
+                document.getElementById('result').innerHTML = "Please enter valid binary numbers.";
+                return;
+            }
 
-  function clearDisplay() {
-    document.getElementById('display').value = '';
-  }
+            // Convert binary inputs to decimal
+            let decimal1 = parseInt(binary1, 2);
+            let decimal2 = parseInt(binary2, 2);
+            let result;
 
-  function deleteCharacter() {
-    let current = document.getElementById('display').value;
-    document.getElementById('display').value = current.slice(0, -1);
-  }
+            // Perform the selected operation
+            switch(operation) {
+                case 'add':
+                    result = decimal1 + decimal2;
+                    break;
+                case 'subtract':
+                    result = decimal1 - decimal2;
+                    break;
+                case 'multiply':
+                    result = decimal1 * decimal2;
+                    break;
+                case 'divide':
+                    if (decimal2 === 0) {
+                        document.getElementById('result').innerHTML = "Cannot divide by zero.";
+                        return;
+                    }
+                    result = Math.floor(decimal1 / decimal2); // integer division
+                    break;
+            }
 
-  function calculate() {
-    try {
-      let result = eval(document.getElementById('display').value);
-      document.getElementById('display').value = result;
-    } catch (e) {
-      document.getElementById('display').value = 'Error';
-    }
-  }
-</script>
+            // Convert the result back to binary
+            let binaryResult = result.toString(2);
+
+            // Display the result
+            document.getElementById('result').innerHTML = `Result: ${binaryResult}`;
+        }
+    </script>
+
+</body>
+</html>

@@ -6,6 +6,8 @@ hide: true
 ---
 
 <h1> My Page </h1>
+<br>
+<br>
 ## Gaming Submenu
 <br>
 <br>

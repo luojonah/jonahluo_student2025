@@ -1,104 +1,67 @@
 ---
 layout: base
-title: Calculator 
+title: Binary Calculator
 ---
+
+# Decimal to Binary Calculator
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        input {
-            padding: 10px;
-            margin: 5px;
-            width: 100px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-        }
-    </style>
+    <title>Decimal to Binary Calculator</title>
 </head>
 <body>
 
-    <h1>Binary Calculator</h1>
 
-    <input type="text" id="binary1" placeholder="Enter binary 1">
-    <br>
-    <input type="text" id="binary2" placeholder="Enter binary 2">
-    <br><br>
+<h1>Decimal to Binary Calculator</h1>
 
-    <button onclick="calculate('add')">Add</button>
-    <button onclick="calculate('subtract')">Subtract</button>
-    <button onclick="calculate('multiply')">Multiply</button>
-    <button onclick="calculate('divide')">Divide</button>
 
-    <div class="result">
-        <p id="result"></p>
-    </div>
+<form>
+    <label for="decimal1">First Decimal Number:</label>
+    <input type="number" id="decimal1" name="decimal1" placeholder="Enter decimal number"><br><br>
 
-    <script>
-        function calculate(operation) {
-            let binary1 = document.getElementById('binary1').value;
-            let binary2 = document.getElementById('binary2').value;
 
-            // Check if input is valid binary
-            if (!/^[01]+$/.test(binary1) || !/^[01]+$/.test(binary2)) {
-                document.getElementById('result').innerHTML = "Please enter valid binary numbers.";
-                return;
-            }
+    <label for="decimal2">Second Decimal Number:</label>
+    <input type="number" id="decimal2" name="decimal2" placeholder="Enter decimal number"><br><br>
 
-            // Convert binary inputs to decimal
-            let decimal1 = parseInt(binary1, 2);
-            let decimal2 = parseInt(binary2, 2);
-            let result;
 
-            // Perform the selected operation
-            switch(operation) {
-                case 'add':
-                    result = decimal1 + decimal2;
-                    break;
-                case 'subtract':
-                    result = decimal1 - decimal2;
-                    break;
-                case 'multiply':
-                    result = decimal1 * decimal2;
-                    break;
-                case 'divide':
-                    if (decimal2 === 0) {
-                        document.getElementById('result').innerHTML = "Cannot divide by zero.";
-                        return;
-                    }
-                    result = Math.floor(decimal1 / decimal2); // integer division
-                    break;
-            }
+    <label for="operation">Operation:</label>
+    <select id="operation" name="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+    </select><br><br>
 
-            // Convert the result back to binary
-            let binaryResult = result.toString(2);
 
-            // Display the result
-            document.getElementById('result').innerHTML = `Result: ${binaryResult}`;
+    <button type="button" onclick="calculate()">Calculate</button>
+</form>
+
+
+<h2>Result (Binary): <span id="result"></span></h2>
+
+
+<script>
+    function calculate() {
+        const decimal1 = parseInt(document.getElementById('decimal1').value);
+        const decimal2 = parseInt(document.getElementById('decimal2').value);
+        const operation = document.getElementById('operation').value;
+
+
+        let result;
+
+
+        if (operation === 'add') {
+            result = decimal1 + decimal2;
+        } else if (operation === 'subtract') {
+            result = decimal1 - decimal2;
         }
-    </script>
+
+
+        // Convert result to binary
+        document.getElementById('result').textContent = result.toString(2);
+    }
+</script>
+
 
 </body>
 </html>

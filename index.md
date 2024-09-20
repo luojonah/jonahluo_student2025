@@ -8,6 +8,10 @@ hide: true
 <h1> My Page </h1>
 <br>
 <br>
+<br>
+<br>
+<hr>
+<br>
 <h3>Gaming Submenu</h3>
 <br>
 <br>
@@ -72,7 +76,7 @@ hide: true
         }
         .mario-animation {
             position: absolute; /* Fixed position to stay on bottom */
-            top: 1615px;
+            top: 145px;
             left: -100px; /* Start position off the screen */
             width: 85px; /* Adjust size as needed */
             height: auto;

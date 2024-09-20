@@ -23,9 +23,7 @@ plugins:
 header_pages:
   - navigation/blog.md
   - navigation/search.md
+  - navigation/about.md
   - navigation/journey.md
   - navigation/barcelona.md
-  - navigation/calculator.md
-  - navigation/snake.md
-  - navigation/game.md
   - README4YML.md

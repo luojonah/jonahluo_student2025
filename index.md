@@ -8,8 +8,7 @@ hide: true
 <h1> My Page </h1>
 <br>
 <br>
-<br>
-## Gaming Submenu
+<h3>Gaming Submenu</h3>
 <br>
 <br>
 <style>

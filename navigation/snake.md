@@ -325,6 +325,17 @@ title: Snake
                     break;
             }
         }
+
+// Prevent default scrolling when using arrow keys
+canvas.onkeydown = function(evt) {
+    changeDir(evt.keyCode);
+
+    // Prevent the default action of arrow keys (scrolling the page)
+    if (evt.keyCode === 37 || evt.keyCode === 38 || evt.keyCode === 39 || evt.keyCode === 40) {
+        evt.preventDefault();
+    }
+};
+
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){

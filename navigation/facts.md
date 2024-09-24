@@ -8,8 +8,6 @@ title: Random Facts Generator
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FC Barcelona Random Fact Generator</title>
-    <br>
-    <br>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,7 +41,11 @@ title: Random Facts Generator
 <body>
 
     <h1>FC Barcelona Random Fact Generator</h1>
+    <br>
+    <br>
     <div id="fact-box">Press the button to see a fact!</div>
+    <br>
+    <br>
     <button onclick="generateFact()">Get a Fact</button>
 
     <script>

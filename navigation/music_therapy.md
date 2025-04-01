@@ -4,7 +4,6 @@ title: Music Generator
 permalink: /music/
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,6 +48,12 @@ permalink: /music/
             margin-top: 20px;
             text-align: left;
         }
+        iframe {
+            width: 100%;
+            height: 380px;
+            border: none;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -72,29 +77,49 @@ permalink: /music/
         </select>
         <button onclick="getPlaylist()">Get Playlist</button>
         <div id="playlist"></div>
+        <div id="spotify"></div>
+        <div id="youtube"></div>
     </div>
 
     <script>
         function getPlaylist() {
             const mood = document.getElementById("mood").value;
             const playlistDiv = document.getElementById("playlist");
-            let playlists = {
-                happy: ["Happy - Pharrell Williams", "Can't Stop the Feeling - Justin Timberlake", "Walking on Sunshine - Katrina & The Waves", "Best Day of My Life - American Authors", "Good as Hell - Lizzo"],
-                sad: ["Someone Like You - Adele", "Fix You - Coldplay", "Hallelujah - Jeff Buckley", "Let Her Go - Passenger", "All I Want - Kodaline"],
-                relaxed: ["Weightless - Marconi Union", "Sunset Lover - Petit Biscuit", "Better Together - Jack Johnson", "Banana Pancakes - Jack Johnson", "Imagine - John Lennon"],
-                energetic: ["Stronger - Kanye West", "Uptown Funk - Mark Ronson ft. Bruno Mars", "Eye of the Tiger - Survivor", "Don't Stop Me Now - Queen", "Can't Hold Us - Macklemore & Ryan Lewis"],
-                stressed: ["Weightless - Marconi Union", "Clair de Lune - Debussy", "Breathe Me - Sia", "Skinny Love - Bon Iver", "Fix You - Coldplay"],
-                romantic: ["Perfect - Ed Sheeran", "Thinking Out Loud - Ed Sheeran", "All of Me - John Legend", "Unchained Melody - The Righteous Brothers", "Make You Feel My Love - Adele"],
-                motivated: ["Lose Yourself - Eminem", "Stronger - Kanye West", "Eye of the Tiger - Survivor", "Hall of Fame - The Script ft. will.i.am", "Remember the Name - Fort Minor"],
-                nostalgic: ["Smells Like Teen Spirit - Nirvana", "Take On Me - a-ha", "Bohemian Rhapsody - Queen", "Sweet Child O' Mine - Guns N' Roses", "Hey Jude - The Beatles"],
-                angry: ["Break Stuff - Limp Bizkit", "Killing in the Name - Rage Against the Machine", "Last Resort - Papa Roach", "Before I Forget - Slipknot", "Given Up - Linkin Park"],
-                hopeful: ["Rise Up - Andra Day", "What a Wonderful World - Louis Armstrong", "Somewhere Over the Rainbow - Israel Kamakawiwo'ole", "Heal the World - Michael Jackson", "Beautiful Day - U2"],
-                lonely: ["Boulevard of Broken Dreams - Green Day", "Tears in Heaven - Eric Clapton", "All By Myself - Celine Dion", "Creep - Radiohead", "Yesterday - The Beatles"],
-                excited: ["We Will Rock You - Queen", "Thunderstruck - AC/DC", "Let's Get It Started - Black Eyed Peas", "Party Rock Anthem - LMFAO", "Can't Stop - Red Hot Chili Peppers"]
+            const spotifyDiv = document.getElementById("spotify");
+            const youtubeDiv = document.getElementById("youtube");
+
+            let spotifyPlaylists = {
+                happy: "37i9dQZF1DXdPec7aLTmlC",
+                sad: "37i9dQZF1DX7qK8ma5wgG1",
+                relaxed: "37i9dQZF1DX4sWSpwq3LiO",
+                energetic: "37i9dQZF1DX8FwnYE6PRvL",
+                stressed: "37i9dQZF1DX3YSRoSdA634",
+                romantic: "37i9dQZF1DXbEm2sKzgoJ8",
+                motivated: "37i9dQZF1DXdxcBWuJkbcy",
+                nostalgic: "37i9dQZF1DX4OzrY981I1W",
+                angry: "37i9dQZF1DX3H5z3ZVpVZB",
+                hopeful: "37i9dQZF1DXcBWIGoYBM5M",
+                lonely: "37i9dQZF1DX3YSRoSdA634",
+                excited: "37i9dQZF1DX1s9knjP51Oa"
             };
-            
-            let playlist = playlists[mood] || [];
-            playlistDiv.innerHTML = "<h3>Your Playlist:</h3><ul>" + playlist.map(song => `<li>${song}</li>`).join('') + "</ul>";
+
+            let youtubePlaylists = {
+                happy: "https://www.youtube.com/watch?v=ZbZSe6N_BXs&list=PLFZnsq5sh00D95BvFcdZ4oL7R4qLy_XvG",
+                sad: "https://www.youtube.com/watch?v=YQHsXMglC9A&list=PLFZnsq5sh00BZCMEQJDFtxj0Plzyh5b8h",
+                relaxed: "https://www.youtube.com/watch?v=UfcAVejslrU&list=PLFZnsq5sh00Dhu_lgrHpLxzjH-3DNhQUZ",
+                energetic: "https://www.youtube.com/watch?v=OPf0YbXqDm0&list=PLFZnsq5sh00Dx4_XDCcM5wFz0iRQ1eFMR",
+                stressed: "https://www.youtube.com/watch?v=2NuvLbR2F4w&list=PLFZnsq5sh00D-YbF71aP1nq8_DpYb7aQj",
+                romantic: "https://www.youtube.com/watch?v=2Vv-BfVoq4g&list=PLFZnsq5sh00A1r9Ch3FTpOb-0tdwpX6DQ",
+                motivated: "https://www.youtube.com/watch?v=2X_2IdybTV0&list=PLFZnsq5sh00CgWQQJrfdy4thZG-6P_r6e",
+                nostalgic: "https://www.youtube.com/watch?v=hTWKbfoikeg&list=PLFZnsq5sh00DHw4LXaOL57ufj9rEKGL8V",
+                angry: "https://www.youtube.com/watch?v=ZpUYjpKg9KY&list=PLFZnsq5sh00Cl6H-bhH0SHHPaPyYpLKpm",
+                hopeful: "https://www.youtube.com/watch?v=eT7nD02Im5E&list=PLFZnsq5sh00CWVwRzZwxtvXk5b-MxaLZ7",
+                lonely: "https://www.youtube.com/watch?v=gxEPV4kolz0&list=PLFZnsq5sh00A0Oix60FbJpHbR8MKqE3cR",
+                excited: "https://www.youtube.com/watch?v=4fndeDfaWCg&list=PLFZnsq5sh00AVPMH4F2e1ZdmzLbuL7hhV"
+            };
+
+            spotifyDiv.innerHTML = `<iframe src="https://open.spotify.com/embed/playlist/${spotifyPlaylists[mood]}" allow="encrypted-media"></iframe>`;
+            youtubeDiv.innerHTML = `<p><a href="${youtubePlaylists[mood]}" target="_blank">🎵 Open YouTube Playlist</a></p>`;
         }
     </script>
 </body>

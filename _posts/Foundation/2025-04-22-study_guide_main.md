@@ -82,6 +82,36 @@ categories: [Jonah Study Guide]
             <div class="big-idea">
                 <h3><a href="{{ site.baseurl }}/StudyMCQ">MCQ Blog</a></h3>
             </div>
+            <div class="big-idea">
+                <h3><a href="{{ site.baseurl }}/digital_divide">Digital Divide</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="{{ site.baseurl }}/binary_search">Binary Search</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="{{ site.baseurl }}/lists_&_filtering">Lists & Filtering Systems</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="{{ site.baseurl }}/big_o">Big O and Algorithm Efficiency</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="{{ site.baseurl }}/undecideable">Undecideable Problems, Graphs + Heuristics</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="https://github.com/luojonah/jonahluo_student2025/issues/12" target="_blank">Beneficial / Harmful Effects</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="https://github.com/luojonah/jonahluo_student2025/issues/13" target="_blank">Crowdsourcing</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="https://github.com/luojonah/jonahluo_student2025/issues/14" target="_blank">Legal & Ethical Concerns</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="https://github.com/luojonah/jonahluo_student2025/issues/15" target="_blank">Safe Computing</a></h3>
+            </div>
+            <div class="big-idea">
+                <h3><a href="https://github.com/luojonah/jonahluo_student2025/issues/16" target="_blank">Simulation/Games and Random Algorithms</a></h3>
+            </div>
         </div>
     </div>
 </body>

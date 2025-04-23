@@ -62,22 +62,22 @@ categories: [Jonah Study Guide]
         <div class="header">AP Computer Science Principles - Study Guide Index</div>
         <div class="grid">
             <div class="big-idea">
-                <h3><a href="/StudyG1">Unit 1: Creative Development</a></h3>
+                <h3><a href="{{ site.baseurl }}/StudyG1">Unit 1: Creative Development</a></h3>
             </div>
             <div class="big-idea">
-                <h3><a href="/StudyG2">Unit 2: Data</a></h3>
+                <h3><a href="{{ site.baseurl }}/StudyG2">Unit 2: Data</a></h3>
             </div>
             <div class="big-idea">
-                <h3><a href="/StudyG3">Unit 3: Algorithms & Programming</a></h3>
+                <h3><a href="{{ site.baseurl }}/StudyG3">Unit 3: Algorithms & Programming</a></h3>
             </div>
             <div class="big-idea">
-                <h3><a href="/StudyG4">Unit 4: Computer Systems & Networks</a></h3>
+                <h3><a href="{{ site.baseurl }}/StudyG4">Unit 4: Computer Systems & Networks</a></h3>
             </div>
             <div class="big-idea">
-                <h3><a href="/StudyG5">Unit 5: Impact of Computing</a></h3>
+                <h3><a href="{{ site.baseurl }}/StudyG5">Unit 5: Impact of Computing</a></h3>
             </div>
             <div class="big-idea">
-                <h3><a href="/CPT">Create Performance Task (CPT)</a></h3>
+                <h3><a href="{{ site.baseurl }}/StudyCPT">Create Performance Task (CPT)</a></h3>
             </div>
         </div>
     </div>

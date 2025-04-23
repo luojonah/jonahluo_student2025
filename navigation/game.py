@@ -1,17 +1,7 @@
 import random
 
-# ---- Procedure with name, parameters, return type, and algorithm ----
+# Procedure with name, parameters, return type, and algorithm 
 def check_guess(word, guesses):
-    """
-    Checks which letters from the word have been guessed.
-
-    Parameters:
-        word (str): The hidden word.
-        guesses (list): Letters the player has guessed.
-
-    Returns:
-        str: A string showing the word with correctly guessed letters and underscores.
-    """
     display = ""
     for letter in word:
         if letter in guesses:
@@ -21,23 +11,14 @@ def check_guess(word, guesses):
     return display.strip()
 
 
-# ---- Read words from file (input from a file) ----
+# Read words from file (input from a file) 
 def load_words(words):
-    """
-    Loads a list of words from a text file.
-
-    Parameters:
-        filename (str): Name of the file containing words.
-
-    Returns:
-        list: A list of words from the file.
-    """
     with open(words, "r") as file:
         words = file.read().splitlines()
     return words
 
 
-# ---- Main Game Logic ----
+# Main Game Logic 
 def play_game():
     word_list = load_words("navigation/words.txt")  # Update path as needed
 

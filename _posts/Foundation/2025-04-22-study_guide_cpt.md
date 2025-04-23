@@ -22,33 +22,6 @@ This page contains:
 - Tips and lessons learned
 - Reflections and future goals
 
----
-
-## 💻 Final Project Submission
-
-### 📸 Evidence of Completion
-![Evidence of Completion](images/PPRComplete.png)
-
-### 🎥 Project Video (Three Attempts)
-*Note: I increased the playback speed to meet the time limit while maintaining clarity of all required elements.*
-
-<video controls style="max-width: 800px; height: auto;">
-    <source src="images/CSPFinalVideo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-<video controls style="max-width: 800px; height: auto;">
-    <source src="images/CSPFinalVideo(1).mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-<video controls style="max-width: 800px; height: auto;">
-    <source src="images/CSPFinalVideo(2).mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-### 📄 Project Code Repository
-[View Project Documentation (PDF)](https://docs.google.com/document/d/1MDnUA2nDhG6duhOZgy9oUweO_hq6DVxh0--AqDfbNa4/edit?tab=t.0)
 
 ---
 
@@ -105,17 +78,6 @@ Huge thanks to my study group who:
 - Ran mock grading sessions  
 
 Their advice on algorithms and abstraction clarity greatly shaped my final submission.
-
----
-
-## 🖼️ PPR Screenshots
-
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-    <img src="images/PPR1.png" alt="PPR 1" style="max-width: 400px; height: auto;">
-    <img src="images/PPR2.png" alt="PPR 2" style="max-width: 400px; height: auto;">
-    <img src="images/PPR3.png" alt="PPR 3" style="max-width: 400px; height: auto;">
-    <img src="images/PPR4.png" alt="PPR 4" style="max-width: 400px; height: auto;">
-</div>
 
 ---
 

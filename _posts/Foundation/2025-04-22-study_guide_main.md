@@ -6,7 +6,6 @@ permalink: /StudyG
 title: Jonah Luo's Study Guide
 categories: [Jonah Study Guide]
 ---
-{% include nav/study.html %}
 # AP Computer Science Principles (CSP) Study Guide Portal
 
 <html lang="en">

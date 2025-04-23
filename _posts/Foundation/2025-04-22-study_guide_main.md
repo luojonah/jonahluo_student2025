@@ -79,6 +79,9 @@ categories: [Jonah Study Guide]
             <div class="big-idea">
                 <h3><a href="{{ site.baseurl }}/StudyCPT">Create Performance Task (CPT)</a></h3>
             </div>
+            <div class="big-idea">
+                <h3><a href="{{ site.baseurl }}/StudyMCQ">MCQ Blog</a></h3>
+            </div>
         </div>
     </div>
 </body>

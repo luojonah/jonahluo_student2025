@@ -6,7 +6,6 @@ permalink: /StudyG1
 title: Jonah Luo's Study Guide - Unit 1
 categories: [Jonah Study Guide]
 ---
-{% include nav/study.html %}
 
 # AP Computer Science Principles (CSP) Study Guide  
 ## 📘 Unit 1: Creative Development

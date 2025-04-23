@@ -6,7 +6,6 @@ permalink: /StudyG5
 title: Jonah Luo's Study Guide - Unit 5
 categories: [Jonah Study Guide]
 ---
-{% include nav/study.html %}
 
 # AP Computer Science Principles (CSP) Comprehensive Study Guide  
 ## 💡 Unit 5: Impact of Computing

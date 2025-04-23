@@ -6,7 +6,6 @@ permalink: /StudyG4
 title: Jonah Luo's Study Guide - Unit 4
 categories: [Jonah Study Guide]
 ---
-{% include nav/study.html %}
 
 # AP Computer Science Principles (CSP) Study Guide  
 ## 🌐 Unit 4: Computer Systems and Networks

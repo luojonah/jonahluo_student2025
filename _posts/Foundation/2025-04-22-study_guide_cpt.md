@@ -6,7 +6,6 @@ permalink: /StudyCPT
 title: Jonah Luo's CPT Guide
 categories: [Jonah Study Guide]
 ---
-{% include nav/study.html %}
 
 # My AP CSP Create Performance Task (CPT) Guide
 
